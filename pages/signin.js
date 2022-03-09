@@ -30,7 +30,7 @@ return (
     <Container>
          <ExitButton/>
     <Logo/>
-    <h1>Welcome to MuunBot</h1>
+    <h1> Welcome to MuunBot </h1>
     <Line/>
     <LoginButton />
     <h3>or</h3>
