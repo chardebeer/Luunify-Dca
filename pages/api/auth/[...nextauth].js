@@ -1,10 +1,17 @@
-import nodemailer from 'nodemailer'
-import NextAuth from 'next-auth'
-import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
-import EmailProvider from 'next-auth/providers/email'
-import clientPromise from '../../lib/mongodb';
+import nodemailer from "nodemailer";
+import NextAuth from "next-auth";
+import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
+import EmailProvider from "next-auth/providers/email";
+import clientPromise from "../../lib/mongodb";
 
 export default NextAuth({
+  session: {
+    strategy: "jwt",
+  },
+  pages: {
+    signIn: "/signin",
+    signOut: "/signout",
+  },
   adapter: MongoDBAdapter(clientPromise),
   providers: [
     EmailProvider({
@@ -13,32 +20,33 @@ export default NextAuth({
         port: process.env.EMAIL_SERVER_PORT,
         auth: {
           user: process.env.EMAIL_SERVER_USER,
-          pass: process.env.EMAIL_SERVER_PASSWORD
-        }
+          pass: process.env.EMAIL_SERVER_PASSWORD,
+        },
       },
       from: process.env.EMAIL_FROM,
-      async sendVerificationRequest ({ //THIS IS FOR EMAIL CUSTOMIZATION
-                                       identifier: email,
-                                       url,
-                                       provider: { server, from }
-                                     }) {
-        const { host } = new URL(url)
-        const transport = nodemailer.createTransport(server)
+      async sendVerificationRequest({
+        //THIS IS FOR EMAIL CUSTOMIZATION
+        identifier: email,
+        url,
+        provider: { server, from },
+      }) {
+        const { host } = new URL(url);
+        const transport = nodemailer.createTransport(server);
         await transport.sendMail({
           to: email,
           from,
           subject: `Login to ${host}`,
           text: text({ url, host }),
-          html: html({ url, host, email })
-        })
-      }
-    })
-  ]
-})
+          html: html({ url, host, email }),
+        });
+      },
+    }),
+  ],
+});
 
-function html ({ url, host, email }) {
-  const escapedEmail = `${email.replace(/\./g, '&#8203;.')}`
-  const escapedHost = `${host.replace(/\./g, '&#8203;.')}`
+function html({ url, host, email }) {
+  const escapedEmail = `${email.replace(/\./g, "&#8203;.")}`;
+  const escapedHost = `${host.replace(/\./g, "&#8203;.")}`;
   // Your email content
   return `
       <body>
@@ -47,10 +55,10 @@ function html ({ url, host, email }) {
         <p>
           <a href="${url}">Login to ${escapedHost}</a>
       </body>
-  `
+  `;
 }
 
 // Fallback for non-HTML email clients
-function text ({ url, host }) {
-  return `Login to ${host}\n${url}\n\n`
+function text({ url, host }) {
+  return `Login to ${host}\n${url}\n\n`;
 }
