@@ -43,11 +43,7 @@ return (
         <h6>Step #2</h6>
    <h2>Confirmation</h2>
    <Line/>
-   <StyledModal modalText={"Hello"}></StyledModal>
-   
-    <Link href="/newaccount">
-    <StyledNextButton buttonLabel={"Next >"}/>
-    </Link>
+   <StyledModal modalText={"VERIFY EMAIL"}></StyledModal>
     </Container>
     )
 }

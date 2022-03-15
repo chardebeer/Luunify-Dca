@@ -12,7 +12,11 @@ color: #ffffff;
 border: 2px solid #ffffff ;
 width:30%;
 height:35px;
-
+&: hover{
+  background: white;
+  color: #222222;
+border: 2px solid grey;
+}
 &: focus{
   background: white;
   color: #222222;

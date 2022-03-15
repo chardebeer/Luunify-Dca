@@ -6,12 +6,15 @@ import styled from 'styled-components'
 
 const ImageHolder=styled.div`
     background: white;
-    border-radius:100%;
+    border-radius:50%;
     width:110px;
     height:110px;
-    display: block;
+    display: flex;
     margin: 10px auto;
     box-shadow: 1px 10px 10px #aaaaaa;
+    align-content: center;
+    align-items: center;
+    position:relative;
     `   
 
 export default function ConfirmationIcon(props) {

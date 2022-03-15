@@ -10,6 +10,16 @@ import Logo from '../components/Logo'
 import Link from 'next/link';
 
 
+const Container=styled.div`
+background: linear-gradient(180deg, rgba(94,93,93,1) 0%, rgba(0,0,0,1) 100%); 
+text-align: center;
+height:100vh;
+width:100vw;
+color:#FFFFFF;
+padding:20px; 
+font-family:montserrat, sans-serif;
+    `
+
 const Line=styled.hr`
 width:35px;
 height:8px;
@@ -29,8 +39,9 @@ export default function Signin(props) {
 
 return (
    
-    <div>
+    <Container>
         <GlobalStyles/>
+       
         <Link href="/signin">
         <StyledExitButton/>
         </Link>
@@ -42,7 +53,9 @@ return (
     <Link href="/signupform">
     <StyledButton buttonLabel={"Sign Up"} ></StyledButton>
     </Link>
-    </div>
+   
+    </Container>
+    
     
     )
 }

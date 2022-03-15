@@ -43,7 +43,7 @@ return (
         <h6>Step #2</h6>
    <h2>Connect your Binance Account</h2>
    <Line/>
-   <StyledModal checkEmail={"CHECK YOUR EMAIL"}  modalText={"VERIFY EMAIL"}/>
+   <StyledModal checkEmail={"ONBOARDING"}  modalText={"VIDEO FROM JUAN"}/>
     </Container>
     )
 }

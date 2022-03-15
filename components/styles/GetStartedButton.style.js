@@ -6,7 +6,6 @@ font-family:montserrat,arial;
 border-radius: 25px;
 margin: 0 1em;
 padding: 0.25em 1em;
-margin:10px;
 background-color: rgba(255,255,255,0);
 color: black;
 border: solid 3px transparent;
@@ -14,7 +13,7 @@ border: solid 3px transparent;
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 2px 1000px 1px #fff inset;
-width:120px;
+width:130px;
 height:35px;
 
 &:hover{
