@@ -23,7 +23,6 @@ export default function Confirmationpopup(props) {
 return (
     
     <Container>
-        
         <GlobalStyles/>
         <Link href="/signin">
         <StyledExitButton/>
