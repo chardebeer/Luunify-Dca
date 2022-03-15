@@ -1,17 +1,25 @@
 import styled from 'styled-components'
+import Button from '../Button'
 
-const Button=styled.button`
-font-family:montserrat;
+export const StyledButton=styled(Button)`
+font-family:montserrat,arial;
 border-radius: 25px;
 margin: 0 1em;
 padding: 0.25em 1em;
 margin:10px;
-color: ${props => props.theme.fg};
-border: 2px solid ${props => props.theme.fg};
-background: ${props => props.theme.bg};
+background-color: rgba(255,255,255,0);
+color: #ffffff;
+border: 2px solid #ffffff ;
 width:30%;
 height:35px;
-`;
+
+&: focus{
+  background: white;
+  color: #222222;
+border: 2px solid grey;
+}
+`; 
+
 Button.defaultProps = {
     theme: {
       fg: "white",
@@ -23,8 +31,3 @@ Button.defaultProps = {
   fg: bg,
   bg: fg
 });
-
-export default function LoginButton() {
-
-return (<Button>Sign In</Button>)
-}
