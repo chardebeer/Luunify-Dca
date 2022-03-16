@@ -7,7 +7,7 @@ export const StyledModal = styled(Modal)`
   margin: 0 1em;
   padding: 0.25em 1em;
   margin: 10px;
-  background: linear-gradient(white 0%, white 50%, #bbb 50%, #bbb 100%);
+  background: linear-gradient(white 0%, white 30%, #bbb 30%, #bbb 100%);
   color: black;
   border-radius: 25px;
   width: 520px;
@@ -15,4 +15,7 @@ export const StyledModal = styled(Modal)`
   display: block;
   margin: 12px auto;
   box-shadow: 1px 10px 10px #222;
+  > h1 {
+    padding-top: 35%;
+  }
 `;
