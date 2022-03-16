@@ -29,6 +29,21 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/confirmationpopup.js"
+    ],
+    "/dashboard": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/dashboard.js"
+    ],
+    "/newaccount": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/newaccount.js"
+    ],
+    "/newaccount2": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/newaccount2.js"
     ]
   },
   "ampFirstPages": []

@@ -1,8 +1,7 @@
-import styled from 'styled-components'
-import ConfirmationIcon from '../ConfirmationIcon'
+import styled from "styled-components";
+import ConfirmationIcon from "../icons/ConfirmationIcon";
 
-
-export const StyledConfirmationIcon=styled(ConfirmationIcon)`
-    width: 100%;
-    height: auto;
-`
+export const StyledConfirmationIcon = styled(ConfirmationIcon)`
+  width: 100%;
+  height: auto;
+`;

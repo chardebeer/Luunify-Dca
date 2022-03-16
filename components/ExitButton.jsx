@@ -1,16 +1,5 @@
-import React from 'react'
-import {useRouter} from 'next/router'
+import React from "react";
 
-
-
-
-export default function ExitButton(props) {
-    const router = useRouter();
-  
-    function backToSigninForm() {
-        router.replace("/")
-      }
-    return (
-    <button onClick={backToSigninForm}>X</button>
-    )
-    }
+export default function ExitButton() {
+  return <button>X</button>;
+}

@@ -1,26 +1,14 @@
-import React from 'react'
-import {StyledNextButton} from '../components/styles/NextButton.style'
-import Link from 'next/link';
+import React from "react";
 
-
-function Modal({className,modalText,checkEmail}) {
-
-return (<div className={className} >
-    <div>
+function Modal({ className, modalText, checkEmail, children }) {
+  return (
+    <div className={className}>
+      <div></div>
+      <h1>{modalText}</h1>
+      <h5>{checkEmail}</h5>
+      {children}
     </div>
-   <h1>
-   {modalText}
-   </h1>
-    <h5>{checkEmail}</h5>
-   
-     
-    
-    <Link href="/newaccount2">
-    <StyledNextButton buttonLabel={"Next >"}/>
-    </Link>
-    
-    </div>)
-
+  );
 }
 
-export default Modal 
+export default Modal;
