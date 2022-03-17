@@ -2,18 +2,18 @@ import styled from "styled-components";
 import SideNavButton from "../SideNavButton";
 
 export const StyledSideNavButton = styled(SideNavButton)`
-  margin: 20px;
-  background:rgb(255, 0, 0,0 );
+  background: rgb(255, 0, 0, 0);
   color: white;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 80px;
   display: flex;
   align-items: center;
-  position: relative;
-  justify-content: center
+  justify-content: center;
 
   &: hover {
-    color: grey; 
+    background: #555;
   }
 `;
+
+//rgb(255, 0, 0,0 )

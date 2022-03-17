@@ -3,12 +3,10 @@ import DashBoardContainer from "../DashBoardContainer";
 
 export const StyledDashBoardContainer = styled(DashBoardContainer)`
   text-align: center;
-  height: 100vh;
-  width: 100vw;
-  color: #777;
+  height: 100%;
+  width: 100%;
+  color: #222222;
   background: #e9e9e9;
   font-family: montserrat, arial;
-  display: "flex";
-  justify-content: "center";
-  align-items: "center";
+  display: block;
 `;

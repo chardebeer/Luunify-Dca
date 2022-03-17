@@ -12,6 +12,6 @@ export const StyledConfirmationModal = styled(ConfirmationModal)`
   width: 400px;
   height: 300px;
   display: block;
-  margin: 12px auto;
+  margin: 150px auto;
   box-shadow: 1px 10px 10px #333;
 `;
