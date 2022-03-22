@@ -7,7 +7,7 @@ import { StyledBalanceModal } from "../components/styles/BalanceModal.style";
 import { StyledGraphModal } from "../components/styles/GraphModal.style";
 import { StyledPortfolioBreakDownModal } from "../components/styles/PortfolioBreakDownModal.style";
 import { StyledNewsFeedModal } from "../components/styles/NewsFeedModal.style";
-import SearchBar from "./../components/SearchBar";
+import TopNav from "./../components/TopNav";
 
 export default function Confirmationpopup() {
   return (
@@ -15,7 +15,7 @@ export default function Confirmationpopup() {
       <GlobalStyles />
 
       <StyledSideNav />
-      <SearchBar />
+      <TopNav />
       <DashBoardHeader headerText={"DashBoard"} />
       <StyledBalanceModal
         headerText={"Balance"}

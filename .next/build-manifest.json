@@ -25,30 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/confirmationpopup": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/confirmationpopup.js"
-    ],
     "/dashboard": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/dashboard.js"
     ],
-    "/newaccount": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/newaccount.js"
-    ],
     "/newaccount2": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/newaccount2.js"
-    ],
-    "/signupform": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/signupform.js"
     ]
   },
   "ampFirstPages": []
